@@ -44,23 +44,22 @@ $link-color: #aaa;
 $link-color-hover: #77D9D3;
 
 ```
-
 - img
- - "img" has been responsive image compliant.
+  - "img" has been responsive image compliant.
 - img-filter
- - Style for setting translucent color on image.
+  - Style for setting translucent color on image.
 - font
- - Set your favorite font.
+  - Set your favorite font.
 - main-text-color
- - It's your name text color.
+  - It's your name text color.
 - sub-text-color
- - It's discription text color.
+  - It's discription text color.
 - text-shadow-color
- - Set your name and discription text shadow
+  - Set your name and discription text shadow
 - link-color
- - It's social links color
+  - It's social links color
 - link-color-hover
- - It's hover change for social links color
+  - It's hover change for social links color
 
 ---
 Edit `_data/summary.yml` like this
