@@ -1,0 +1,129 @@
+---
+---
+
+
+// setting
+
+$img: "http://farm7.static.flickr.com/6217/6341166445_daccd3fcce_b.jpg";
+$img-filter: rgba(0,0,0,0.6);
+$font: serif;
+$main-text-color: #eee;
+$sub-text-color: #bbb;
+$text-shadow-color: #333;
+$link-color: #aaa;
+$link-color-hover: #77D9D3;
+
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, nav {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;}
+
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    line-height: 1;
+    font-family: $font;
+    color: $main-text-color;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url($img) center center / cover no-repeat fixed;
+    pointer-events: none;
+    
+    &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $img-filter;}
+}
+@media only screen and (max-width: 767px) {
+  .bg {
+    background-image: url($img);
+  }
+}
+
+
+//contents setting
+.contents {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    height: 160px;
+    margin-top: -100px;}
+
+//text style
+h1 {
+	width: 100%;
+	margin-bottom: 16px;
+	font-size: 80px;
+	text-shadow: 1px 1px 2px $text-shadow-color;}
+h2{
+	margin-bottom: 44px;
+	color: $sub-text-color;
+	font-size: 24px;
+	text-shadow: 1px 1px 2px $text-shadow-color;}
+
+//link style
+.link {
+    position: relative;
+	display: inline-block;
+	padding: 16px;
+	margin: 4px;
+    outline: none;
+    background-color: rgba(255,255,255,.1);
+	border-radius: 50%;
+	border: 2px solid transparent;
+	color: $link-color;
+	text-align: center;
+	text-decoration: none;
+    transition: all .2s;}
+.link::before,
+.link::after {
+	position: absolute;
+	z-index: 2;
+	content: '';
+	width: 0;
+	height: 0;
+	border: 2px solid transparent;}
+.link::before {
+	top: -2px;
+	left: -2px;}
+.link::after {
+	bottom: -2px;
+	right: -2px;}
+.link:hover {
+	color: $link-color-hover;
+    background-color: rgba(255,255,255,.2);}
+.link:hover::before,
+.link:hover::after {
+	width: 100%;
+	height: 100%;}
+.link:hover::before {
+	border-bottom-color: $link-color-hover;
+	border-left-color: $link-color-hover;
+	border-radius: 50%;
+    transition: height .32s, width .1s .1s;}
+.link:hover::after {
+	border-top-color: $link-color-hover;
+	border-right-color: $link-color-hover;
+	border-radius: 50%;
+    transition: height .32s, width .1s .1s;}

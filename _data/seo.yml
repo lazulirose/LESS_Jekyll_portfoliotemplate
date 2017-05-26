@@ -1,0 +1,17 @@
+## comon
+site-name: "Ancy"
+url: "http://lazulirose.com/"
+description: "Portfolio　Template less demo"
+keywords: "designer, engineer, portfolio"
+
+## facebook
+facebook-title: "Portfolio　Template less demo"
+facebook-img: "https://avatars3.githubusercontent.com/u/28818572?v=3&s=460"
+facebook-id: "556138191440732"
+locale: "ja_JP"
+
+## twitter
+twitter-card: "summary_large_image"
+twitter-id: "@lazulirose_ancy"
+twitter-img: "https://avatars3.githubusercontent.com/u/28818572?v=3&s=460"
+domain: "lazulirose.com"
